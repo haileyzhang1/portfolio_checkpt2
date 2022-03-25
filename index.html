@@ -6,6 +6,15 @@
 <html lang="en">
 <!-- All of the meta data for the page belongs in the header tag -->
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-03VEXGNCJJ"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-03VEXGNCJJ');
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Link to the favicon image -->
@@ -14,11 +23,15 @@
 	<link rel="stylesheet" href="css/html5reset.css">
 	<!-- Link to the stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/ae09f7e522.js" crossorigin="anonymous"></script>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<title>About Me</title>
 </head>
 
 <!-- All of the visible code in the page belongs in the body tag -->
-<body>
+<body id= 'front'>
 	<a class = "skip" href='#main'>Skip to Main Content</a>
 	<header>
 	<nav>
@@ -30,7 +43,7 @@
 			<li><a href = "project2.html">Animate</a></li>
 		</ul>
 	</nav>
-	<h1 id='main'>Hi, I'm Hailey</h1>
+	<h1 id='typewriter'>Hi, I'm Hailey</h1>
 	</header>
 	<!-- Every page should have a main tag for accessibility -->
 	<main>
@@ -43,12 +56,12 @@
 			<div class='preview'>
 				<a href="project1.html"><img src = "images/launchit-mockup.png" alt="launchit project preview" width='500'/></a>
 				<a href="project2.html"><img src = "images/animate-cover_pic.png" alt="animate project preview" width='500'/></a>
-
 			</div>
-		
+
 	</main>
 	<footer>
 		<p>Jinghan Zhang &copy; 2022</p>
+		<a href="https://www.linkedin.com/in/hailey-zhang-623750b3/"><i class="fa-brands fa-linkedin" style="color:black"></i></a>
 	</footer>
 
 </body>
