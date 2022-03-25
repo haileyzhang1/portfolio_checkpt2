@@ -4,6 +4,12 @@ body{
 	margin:1%;
 	padding:1%;
 	font-size:150%;
+	font-family: 'Montserrat', sans-serif;
+}
+#about{
+	background-image: url('../images/background-image.jpg');
+	background-size: cover;
+	background-color: #f1f1f1;
 }
 
 /*Make the h1 heading bigger with a bold font*/
@@ -13,6 +19,13 @@ h1{
 }
 
 
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: right;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* style navigation bar */
 nav ul {
@@ -27,8 +40,8 @@ nav li{
 	float: left;
 }
 nav li a{
+	display: flex;
 	color: black !important;
-	display: block;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
   	text-align: center;
   	padding: 16px 20px;
@@ -54,7 +67,10 @@ nav li a{
 }
 .preview{
 	display:flex;
-	flex: 50%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* flex: 50%; */
 }
 .preview img{
 	padding: 5px;
@@ -64,25 +80,22 @@ nav li a{
 	filter: grayscale();
 	border: 3px solid white;
 }
-.prototype img{
-	height:500px;
-	width: auto;
-	/* float:left; */
-	/* margin-left: auto;
-	margin-right: auto; */
-}
+
 img{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
     padding: 10px;
-	border: 1px lightsteelblue solid;
+	/* border: 1px lightsteelblue solid; */
 	border-radius: 5px;
-	display: block;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top: 20px;
 }
-img:hover{
-	filter: grayscale();
+.prototype img:hover{
+	transform: scale(1.05);
 }
+
 #bg{
 	padding: 30px;
 	background-color: #54586F;
@@ -104,11 +117,16 @@ h2{
 }
 
 p{
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
 	line-height: 28px;
 }
 li{
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	line-height: 28px;
+
+
 }
 .prototype p{
 	text-align: center;
@@ -137,13 +155,69 @@ main li{
 	padding-bottom: 5px;
 }
 footer{
-	color: grey;
+	color: black;
 	padding: 32px 8px;
     width:100%;
-    margin-bottom:0px;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	justify-content: center;
+}
+footer p{
+	grid-row: 1/2;
+}
+footer a{
+	grid-row-start: 2;
 }
 
-
+#contact{
+	margin-top: 50px;
+}
+.container{
+	padding: 30px;
+	border-radius: 10px;
+	background-color: #f1f1f1;
+}
+input[type=text]{
+	display: block;
+	width: 100%;
+	padding: 20px;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+input[type=submit]{
+	display: block;
+	background-color: lightgrey;
+	font-size: 20px;
+	color: black;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 1px solid lightgrey;
+	margin: 10px;
+}
 /*Added this so the links stay the same color*/
-a:visited{color:white}
-
+a:visited{color: black}
+#typewriter{
+	overflow: hidden;
+	border-right: .15em solid grey;
+	white-space: nowrap;
+	margin: 0 auto;
+	/* letter-spacing: 0.15em; */
+	animation: typing 3.5s steps(40, end),
+	blink-caret 0.5s step-end infinite;
+}
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: grey }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+    }
+}
