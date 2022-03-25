@@ -86,11 +86,22 @@ img{
 	flex-wrap: wrap;
 	justify-content: center;
     padding: 10px;
-	/* border: 1px lightsteelblue solid; */
-	border-radius: 5px;
+
 	margin-left:auto;
 	margin-right:auto;
 	margin-top: 20px;
+}
+#mobile{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 400px);
+	border: aliceblue 1px solid;
+	border-radius: 5px;
+
+}
+#mobile img{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .prototype img:hover{
 	transform: scale(1.05);
@@ -128,6 +139,7 @@ li{
 
 
 }
+
 .prototype p{
 	text-align: center;
 }
@@ -178,6 +190,16 @@ footer a{
 	background-color: #f1f1f1;
 }
 input[type=text]{
+	display: block;
+	width: 100%;
+	padding: 20px;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+input[type=number]{
 	display: block;
 	width: 100%;
 	padding: 20px;
